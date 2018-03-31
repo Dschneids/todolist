@@ -20,6 +20,7 @@ export class AppComponent {
         completed: false
       }
     );
+    todo.value = "";
   }
 
   editToDo(key) {
