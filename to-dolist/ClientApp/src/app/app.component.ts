@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   toDoList: Array<ToDo> = [];
+
+  addToDo() { }
+
+  editToDo() { }
+
+  completeToDo() { }
 }
 
 interface ToDo {
