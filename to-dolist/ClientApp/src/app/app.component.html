@@ -1,15 +1,15 @@
-<div class='container jumbotron'>
+<div id="titleBackdrop" class='container jumbotron'>
   <div class='row'>
-    <div class='col-md-4'>
-      <h1>To-Do List</h1>
+    <div id="title" class='col-md-4'>
+      <h1 class="display-1">To-Do List</h1>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div id="inputContainer" class="container">
   <div class="row">
     <div class="col-sm-6 pull-left">
-      <input #newToDo class="form-control" placeholder="Enter your new To-Do item." type="text" name="todo"/>
+      <input #newToDo id="input" class="form-control" placeholder="Enter your new To-Do item." type="text" name="todo"/>
     </div>
     <div class="">
       <button class="btn btn-primary" (click)="addToDo(newToDo)">Add to list</button>
@@ -37,8 +37,8 @@
               </td>
             </ng-template>
             <td>
-              <button class="btn btn-danger col-sm-2" (click)="editToDo(key)">Edit?</button>
-              <button class="btn btn-success col-sm-2" (click)="completeToDo(key)">Finished?</button>
+              <button class="btn btn-danger" (click)="editToDo(key)">Edit?</button>
+              <button class="btn btn-success" (click)="completeToDo(key)">Finished?</button>
             </td>
           </tr>
         </tbody>
