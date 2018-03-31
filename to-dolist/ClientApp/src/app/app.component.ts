@@ -22,7 +22,10 @@ export class AppComponent {
     );
   }
 
-  editToDo() { }
+  editToDo(key) {
+    var editedToDo = prompt("Change the name?", this.toDoList[key].name);
+    if (editedToDo != null) this.toDoList[key].name = editedToDo;
+  }
 
   completeToDo() { }
 }
