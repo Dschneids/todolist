@@ -20,25 +20,25 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>To-Do</th>
-            <th>Modify To-Do</th>
+            <th id="tableHeaders">To-Do</th>
+            <th id="tableHeaders">Modify To-Do</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let todo of toDoList; let key = index">
-            <td *ngIf="todo.completed; else notCompletedToDo">
+            <td id="toDoSpacing" *ngIf="todo.completed; else notCompletedToDo">
               <s>
                 {{todo.name}}
               </s>
             </td>
             <ng-template #notCompletedToDo>
-              <td>
+              <td id="toDoSpacing">
                 {{todo.name}}
               </td>
             </ng-template>
             <td>
-              <button class="btn btn-danger" (click)="editToDo(key)">Edit?</button>
-              <button class="btn btn-success" (click)="completeToDo(key)">Finished?</button>
+              <button class="btn btn-danger col-md-offset-3" (click)="editToDo(key)">Edit?</button>
+              <button class="btn btn-success col-md-offset-3" (click)="completeToDo(key)">Done?</button>
             </td>
           </tr>
         </tbody>
