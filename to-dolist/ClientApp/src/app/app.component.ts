@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   toDoList: Array<ToDo> = [{
-    name: "Im an example",
+    name: "I'm an example",
     completed: false
   }];
 
