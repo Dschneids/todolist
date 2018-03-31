@@ -10,7 +10,12 @@ export class AppComponent {
   title = 'app';
   toDoList: Array<ToDo> = [];
 
-  addToDo() { }
+  addToDo(ToDo) {
+    this.toDoList.push({
+      name: ToDo.name,
+      completed: false
+    })
+  }
 
   editToDo() { }
 
