@@ -12,7 +12,29 @@
       <input #newToDo class="form-control" placeholder="Enter your new To-Do item." type="text" name="todo"/>
     </div>
     <div class="">
-      <button class="btn btn-primary" (click)="addToDo(ToDo)">Add to list</button>
+      <button class="btn btn-primary" (click)="addToDo(newToDo)">Add to list</button>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>To-Do</th>
+            <th>Modify To-Do</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of toDoList;">
+            <td>
+                {{todo.name}}
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
   </div>
 </div>

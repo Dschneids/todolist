@@ -8,13 +8,18 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'app';
-  toDoList: Array<ToDo> = [];
+  toDoList: Array<ToDo> = [{
+    name: "Im an example",
+    completed: false
+  }];
 
-  addToDo(ToDo) {
-    this.toDoList.push({
-      name: ToDo.name,
-      completed: false
-    })
+  addToDo(todo) {
+    this.toDoList.push(
+      {
+        name: todo.value,
+        completed: false
+      }
+    );
   }
 
   editToDo() { }
