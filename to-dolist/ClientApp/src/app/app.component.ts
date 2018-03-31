@@ -27,7 +27,9 @@ export class AppComponent {
     if (editedToDo != null) this.toDoList[key].name = editedToDo;
   }
 
-  completeToDo() { }
+  completeToDo(key) {
+    this.toDoList[key].completed = true;
+  }
 }
 
 interface ToDo {

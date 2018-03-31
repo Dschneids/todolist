@@ -26,12 +26,19 @@
         </thead>
         <tbody>
           <tr *ngFor="let todo of toDoList; let key = index">
-            <td>
-              {{todo.name}}
+            <td *ngIf="todo.completed; else notCompletedToDo">
+              <s>
+                {{todo.name}}
+              </s>
             </td>
+            <ng-template #notCompletedToDo>
+              <td>
+                {{todo.name}}
+              </td>
+            </ng-template>
             <td>
               <button class="btn btn-danger col-sm-2" (click)="editToDo(key)">Edit?</button>
-              <button class="btn btn-success col-sm-2" (click)="finishToDo(idx)">Finished?</button>
+              <button class="btn btn-success col-sm-2" (click)="completeToDo(key)">Finished?</button>
             </td>
           </tr>
         </tbody>
