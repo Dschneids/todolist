@@ -30,7 +30,8 @@
               {{todo.name}}
             </td>
             <td>
-              <button class="btn btn-danger" (click)="editToDo(key)">Edit?</button>
+              <button class="btn btn-danger col-sm-2" (click)="editToDo(key)">Edit?</button>
+              <button class="btn btn-success col-sm-2" (click)="finishToDo(idx)">Finished?</button>
             </td>
           </tr>
         </tbody>
