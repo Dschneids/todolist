@@ -27,7 +27,12 @@
         <tbody>
           <tr *ngFor="let todo of toDoList;">
             <td>
-                {{todo.name}}
+              {{todo.name}}
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="editToDo()">
+                Edit?
+              </button>
             </td>
           </tr>
         </tbody>
